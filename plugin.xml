@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="hu.pharmapromo.plugins.IndexedListAlert" version="1.0.0">
+    <name>IndexedListAlert</name>
+    <description>Cordova IndexedListAlert Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,indexed,list,alert</keywords>
+    <js-module src="www/PluginHelper.js" name="device">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PluginHelper">
+                <param name="ios-package" value="PluginHelper"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/PluginHelper.h" />
+        <source-file src="src/ios/PluginHelper.m" />
+        <header-file src="src/ios/IndexedListAlert.h" />
+        <source-file src="src/ios/IndexedListAlert.m" />
+    </platform>
+</plugin>
